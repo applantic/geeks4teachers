@@ -10,18 +10,18 @@ export const BackgroundWrapper = styled.div`
 export const ContentWrapper = styled.div`
 	position: relative;
 	z-index: 1;
-	overflow:hidden;
+	overflow: hidden;
 `;
 
 export const AccentChecker = styled.div`
 	position: absolute;
-	top:0;
-	left:0;
+	top: 0;
+	left: 0;
 	width: 20vh;
 	height: 20vh;
 `;
 
-export const CheckersWrapper = styled.div`
+export const CheckersWrapper = styled.div<{ grid: { columns: string; rows: string } }>`
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -29,18 +29,24 @@ export const CheckersWrapper = styled.div`
 	display: grid;
 	align-items: stretch;
 	justify-items: stretch;
-	grid-template-columns: repeat(5, 20vh);
-	grid-template-rows: repeat(5, 20vh);
+	${({ grid }) => {
+		return {
+			gridTemplateColumns: grid.columns,
+			gridTemplateRows: grid.rows,
+		};
+	}}
+
 	margin-bottom: 0;
+	border-top: 1px solid rgba(151, 151, 151, 0.24);
+	border-left: 1px solid rgba(151, 151, 151, 0.24);
 `;
 
 export const Checker = styled.div`
-	width: 20vh;
-	height: 20vh;
 	perspective: 700px;
 	transform-style: preserve-3d;
 	position: relative;
-	border: 0.5px solid rgba(151, 151, 151, 0.24);
+	border-bottom: 1px solid rgba(151, 151, 151, 0.24);
+	border-right: 1px solid rgba(151, 151, 151, 0.24);
 `;
 
 export const CheckerBox = styled.div<{ type: string; picture?: string }>`
@@ -69,3 +75,4 @@ export const CheckerBox = styled.div<{ type: string; picture?: string }>`
 		}
 	}}
 `;
+
