@@ -63,6 +63,17 @@ export const backgrounds = {
 			{ type: 'black' },
 		],
 	},
+	choice: {
+		grid: {
+			columns: '100vh',
+			rows: '20vh 60vh 20vh',
+		},
+		areas: [
+			{ type: 'black' },
+			{ type: 'black' },
+			{ type: 'black' },
+		],
+	},
 };
 
 interface IProps {

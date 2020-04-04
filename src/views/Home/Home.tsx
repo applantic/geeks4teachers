@@ -9,24 +9,21 @@ import {
 	Title,
 	Pink,
 	White,
-	SearchWrapper,
-	SearchLabel,
-	SearchInputWrapper,
-	SearchInput,
-	SearchButtonWrapper,
-	SearchCard,
-	CardsContainer,
-	CardPhoto,
-	CardLabel,
 } from './Home.styled';
 import Background, { backgrounds } from 'components/Background/Background';
 import Button from 'components/Button/Button';
+import Search from './subcomponents/Search';
+import Choice from "./subcomponents/Choice";
 
 const Home = () => {
 	const [step, setStep] = useState('home');
 
 	const handleOpenSearch = () => {
 		setStep('search');
+	};
+
+	const handleSearchQuestion = () => {
+		setStep('choice');
 	};
 
 	const rightSideContent = () => {
@@ -42,33 +39,11 @@ const Home = () => {
 				);
 			}
 			case 'search': {
+				return <Search onClick={handleSearchQuestion} />;
+			}
+			case 'choice': {
 				return (
-					<SearchWrapper>
-						<SearchLabel>Ask a question</SearchLabel>
-						<SearchInputWrapper>
-							<SearchInput placeholder={'Type your question'} />
-						</SearchInputWrapper>
-						<SearchButtonWrapper>
-							<Button size={'small'} onClick={() => {}}>
-								SEND QUESTION
-							</Button>
-						</SearchButtonWrapper>
-						<SearchLabel>Frequently asked questions</SearchLabel>
-						<CardsContainer>
-							<SearchCard>
-								<CardPhoto />
-								<CardLabel>Cosmetic surgery abroad making the right choice</CardLabel>
-							</SearchCard>
-							<SearchCard>
-								<CardPhoto />
-								<CardLabel>Cosmetic surgery abroad making the right choice</CardLabel>
-							</SearchCard>
-							<SearchCard>
-								<CardPhoto />
-								<CardLabel>Cosmetic surgery abroad making the right choice</CardLabel>
-							</SearchCard>
-						</CardsContainer>
-					</SearchWrapper>
+					<Choice />
 				);
 			}
 		}
@@ -85,7 +60,9 @@ const Home = () => {
 							been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
 							galley of type and scrambled it to make a type specimen book.
 						</TeaserExplanation>
-						<Button onClick={handleOpenSearch}>ASK QUESTION</Button>
+						<div style={{ opacity: step === 'home' ? 1 : 0 }}>
+							<Button onClick={handleOpenSearch}>ASK QUESTION</Button>
+						</div>
 					</TextWrapper>
 					{rightSideContent()}
 				</TeaserWrapper>
