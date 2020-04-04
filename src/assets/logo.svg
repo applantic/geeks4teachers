@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="311" height="63" viewBox="0 0 311 63">
+    <defs>
+        <linearGradient id="prefix__a" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF"/>
+            <stop offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" font-family="ProximaNova-Bold, Proxima Nova" font-weight="bold">
+        <text font-size="32">
+            <tspan x="45" y="34" fill="#FFF">Geeks </tspan> <tspan x="144.008" y="34" fill="#D21A4A" font-size="48">4</tspan> <tspan x="172.664" y="34" fill="#FFF"> </tspan> <tspan x="180.856" y="34" fill="#FFF" font-family="ProximaNova-Light, Proxima Nova" font-weight="300">Teachers</tspan>
+        </text>
+        <text fill="url(#prefix__a)" font-size="48" opacity=".24">
+            <tspan x="0" y="44">Geeks</tspan> <tspan x="136.224" y="44" font-size="32"> </tspan> <tspan x="144.416" y="44">4</tspan> <tspan x="173.072" y="44" font-size="32"> </tspan> <tspan x="181.264" y="44" font-family="ProximaNova-Light, Proxima Nova" font-size="32" font-weight="300">Teachers</tspan>
+        </text>
+    </g>
+</svg>

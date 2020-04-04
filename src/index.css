@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 300;
+  src: local('ProximaNova'), url("./assets/fonts/pn300.otf") /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 500;
+  src: local('ProximaNova'), url("./assets/fonts/pn500.otf") /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 700;
+  src: local('ProximaNova'), url("./assets/fonts/pn700.otf") /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 800;
+  src: local('ProximaNova'), url("./assets/fonts/pn800.otf") /* Modern Browsers */
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  font-style: normal;
+  font-weight: 900;
+  src: local('ProximaNova'), url("./assets/fonts/pn900.otf") /* Modern Browsers */
+}
+
+body {
+  margin: 0;
+  font-family: "ProximaNova", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
