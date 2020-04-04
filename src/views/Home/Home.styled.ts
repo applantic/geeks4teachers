@@ -47,7 +47,7 @@ export const Title = styled.div`
 `;
 export const Pink = styled.span`
 	display: flex;
-	font-size: ${() => fontSize(140)};
+	font-size: ${() => fontSize(120)};
 	font-weight: bold;
 	color: #d21a4a;
 	text-align: right;
@@ -57,7 +57,7 @@ export const Pink = styled.span`
 export const White = styled.span`
 	color: white;
 	display: flex;
-	font-size: ${() => fontSize(144)};
+	font-size: ${() => fontSize(140)};
 	font-weight: bold;
 	text-align: right;
 	margin-left: auto;
