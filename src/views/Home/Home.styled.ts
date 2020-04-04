@@ -32,6 +32,7 @@ export const TeaserExplanation = styled.span`
 	color: white;
 	display: flex;
 	font-size: ${() => fontSize(24)};
+	font-weight: 300;
 	margin-bottom: 40px;
 	line-height: 1.67;
 `;
