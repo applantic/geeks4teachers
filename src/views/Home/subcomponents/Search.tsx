@@ -28,15 +28,15 @@ const Search = ({onClick}:any) => {
             <CardsContainer>
                 <SearchCard>
                     <CardPhoto />
-                    <CardLabel>Cosmetic surgery abroad making the right choice</CardLabel>
+                    <CardLabel>How to do a lesson on Zoom?</CardLabel>
                 </SearchCard>
                 <SearchCard>
                     <CardPhoto />
-                    <CardLabel>Cosmetic surgery abroad making the right choice</CardLabel>
+                    <CardLabel>How to make a video presentation?</CardLabel>
                 </SearchCard>
                 <SearchCard>
                     <CardPhoto />
-                    <CardLabel>Cosmetic surgery abroad making the right choice</CardLabel>
+                    <CardLabel>My microphone doesn't work?</CardLabel>
                 </SearchCard>
             </CardsContainer>
         </SearchWrapper>
