@@ -13,11 +13,11 @@ import {
 import Background, { backgrounds } from 'components/Background/Background';
 import Button from 'components/Button/Button';
 import Search from './subcomponents/Search';
-import Choice from "./subcomponents/Choice";
-import Consultant from "./subcomponents/Consultant";
+import Choice from './subcomponents/Choice';
+import Consultant from './subcomponents/Consultant';
 
 const Home = () => {
-	const [step, setStep] = useState('consultant');
+	const [step, setStep] = useState('home');
 
 	const handleOpenSearch = () => {
 		setStep('search');
@@ -47,14 +47,43 @@ const Home = () => {
 				return <Search onClick={handleSearchQuestion} />;
 			}
 			case 'choice': {
-				return (
-					<Choice onClick={handleConsultant} />
-				);
+				return <Choice onClick={handleConsultant} />;
 			}
 			case 'consultant': {
-				return (
-					<Consultant onClick={handleConsultant} />
-				);
+				return <Consultant onClick={handleConsultant} />;
+			}
+		}
+	};
+
+	const leftSideTitle = () => {
+		switch (step) {
+			case 'home': {
+				return "Let's help teachers";
+			}
+			case 'search': {
+				return 'Find a solution';
+			}
+			case 'choice': {
+				return 'You have a choice!';
+			}
+			case 'consultant': {
+				return 'Connect with our consultant!';
+			}
+		}
+	};
+	const leftSideExp = () => {
+		switch (step) {
+			case 'home': {
+				return "G4T is an educational platform created by engineers and online learning enthusiasts. If you are a teacher and have any problems teaching your students online, here is the solution.";
+			}
+			case 'search': {
+				return 'The problems that other teachers face are very often the same as yours. Before you connect with one of our consultants, check our knowledge base. Your solution is probably here!';
+			}
+			case 'choice': {
+				return 'Geeks4Teachers gives you a lot of choice. You can use our knowledge base to find a solution or ask our ChatBot for it. If he can\'t help you, you can always connect with one of our online consultants!';
+			}
+			case 'consultant': {
+				return 'Our consultant will give you appropriate advice. You can connect with him through the camera, microphone or just send him a message!';
 			}
 		}
 	};
@@ -64,12 +93,8 @@ const Home = () => {
 			<HomeWrapper>
 				<TeaserWrapper>
 					<TextWrapper>
-						<TeaserTitle>Ask a question</TeaserTitle>
-						<TeaserExplanation>
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-							been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-							galley of type and scrambled it to make a type specimen book.
-						</TeaserExplanation>
+						<TeaserTitle>{leftSideTitle()}</TeaserTitle>
+						<TeaserExplanation>{leftSideExp()}</TeaserExplanation>
 						<div style={{ opacity: step === 'home' ? 1 : 0 }}>
 							<Button onClick={handleOpenSearch}>ASK QUESTION</Button>
 						</div>

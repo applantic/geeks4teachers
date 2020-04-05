@@ -7,19 +7,18 @@ import {
 	TitleWrapper,
 	OptionTitle,
 	OptionDesc,
-	ChoiceButton
+	ChoiceButton,
 } from './Choice.styled';
 import man from 'assets/images/man.svg';
 import chat from 'assets/images/chat.svg';
 import book from 'assets/images/book.svg';
 
-const Choice = ({onClick}:any) => {
+const Choice = ({ onClick }: any) => {
 	return (
 		<ChoiceWrapper>
 			<ChoiceHeader>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-				industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-				scrambled it to make a type specimen book.
+				Remember that if you choose to talk to one of our online consultants, you will need to be patient. The
+				expected waiting time will be available after clicking on the consultant section.
 			</ChoiceHeader>
 			<OptionsWrapper>
 				<OptionWrapper>
@@ -27,7 +26,7 @@ const Choice = ({onClick}:any) => {
 						<img src={man} />
 						<OptionTitle>Consultant</OptionTitle>
 					</TitleWrapper>
-					<OptionDesc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </OptionDesc>
+					<OptionDesc>Chat with one of our online consultants.</OptionDesc>
 					<ChoiceButton onClick={onClick}>Choose</ChoiceButton>
 				</OptionWrapper>
 				<OptionWrapper>
@@ -35,15 +34,17 @@ const Choice = ({onClick}:any) => {
 						<img src={chat} />
 						<OptionTitle>Chatbot</OptionTitle>
 					</TitleWrapper>
-					<OptionDesc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </OptionDesc>
+					<OptionDesc>Our ChatBot really knows a lot about various technological problems. </OptionDesc>
 					<ChoiceButton>Choose</ChoiceButton>
 				</OptionWrapper>
 				<OptionWrapper>
 					<TitleWrapper>
 						<img src={book} />
-						<OptionTitle>Knowledge Base</OptionTitle>
+						<OptionTitle>Knowledge</OptionTitle>
 					</TitleWrapper>
-					<OptionDesc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </OptionDesc>
+					<OptionDesc>
+						Our knowledge base will help you solve the problem or improve online learning.{' '}
+					</OptionDesc>
 					<ChoiceButton>Choose</ChoiceButton>
 				</OptionWrapper>
 			</OptionsWrapper>
