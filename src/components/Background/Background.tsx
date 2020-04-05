@@ -73,6 +73,15 @@ export const backgrounds = {
 			{ type: 'black' },
 			{ type: 'black' },
 		],
+	},consultant: {
+		grid: {
+			columns: '100vh',
+			rows: '60vh 40vh',
+		},
+		areas: [
+			{ type: 'black' },
+			{ type: 'black' },
+		],
 	},
 };
 

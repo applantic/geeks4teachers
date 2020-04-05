@@ -13,7 +13,7 @@ import man from 'assets/images/man.svg';
 import chat from 'assets/images/chat.svg';
 import book from 'assets/images/book.svg';
 
-const Choice = () => {
+const Choice = ({onClick}:any) => {
 	return (
 		<ChoiceWrapper>
 			<ChoiceHeader>
@@ -25,10 +25,10 @@ const Choice = () => {
 				<OptionWrapper>
 					<TitleWrapper>
 						<img src={man} />
-						<OptionTitle>Konsultant</OptionTitle>
+						<OptionTitle>Consultant</OptionTitle>
 					</TitleWrapper>
 					<OptionDesc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </OptionDesc>
-					<ChoiceButton>Choose</ChoiceButton>
+					<ChoiceButton onClick={onClick}>Choose</ChoiceButton>
 				</OptionWrapper>
 				<OptionWrapper>
 					<TitleWrapper>
@@ -41,7 +41,7 @@ const Choice = () => {
 				<OptionWrapper>
 					<TitleWrapper>
 						<img src={book} />
-						<OptionTitle>Baza Wiedzy</OptionTitle>
+						<OptionTitle>Knowledge Base</OptionTitle>
 					</TitleWrapper>
 					<OptionDesc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </OptionDesc>
 					<ChoiceButton>Choose</ChoiceButton>

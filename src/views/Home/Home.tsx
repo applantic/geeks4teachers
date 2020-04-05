@@ -14,9 +14,10 @@ import Background, { backgrounds } from 'components/Background/Background';
 import Button from 'components/Button/Button';
 import Search from './subcomponents/Search';
 import Choice from "./subcomponents/Choice";
+import Consultant from "./subcomponents/Consultant";
 
 const Home = () => {
-	const [step, setStep] = useState('home');
+	const [step, setStep] = useState('consultant');
 
 	const handleOpenSearch = () => {
 		setStep('search');
@@ -24,6 +25,10 @@ const Home = () => {
 
 	const handleSearchQuestion = () => {
 		setStep('choice');
+	};
+
+	const handleConsultant = () => {
+		setStep('consultant');
 	};
 
 	const rightSideContent = () => {
@@ -43,7 +48,12 @@ const Home = () => {
 			}
 			case 'choice': {
 				return (
-					<Choice />
+					<Choice onClick={handleConsultant} />
+				);
+			}
+			case 'consultant': {
+				return (
+					<Consultant onClick={handleConsultant} />
 				);
 			}
 		}
